@@ -8,5 +8,7 @@ fn main() {
 
     // println!("{}",node_test.value);
 
-    let network = model::NeuralNetwork::new();
+    let mut network = model::NeuralNetwork::new();
+
+    network.create_layer(2);
 }

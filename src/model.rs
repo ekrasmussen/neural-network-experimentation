@@ -4,7 +4,9 @@ pub struct Node {
 }
 
 impl Node {
-    //TODO: implement methods
+    pub fn new() -> Self {
+        Self { value: 1.0, weights: Vec::new()}
+    }
 }
 
 pub struct Layer {
@@ -12,16 +14,30 @@ pub struct Layer {
 }
 
 impl Layer {
-    //TODO: implement methods
+    pub fn new() -> Self {
+        Self { nodes : Vec::new() }
+    }
+
+    pub fn add_nodes(&mut self, node_amount: u32) {
+        for _n in 0..node_amount {
+            self.nodes.push(Node::new())
+        }
+    }
+
 }
 
 pub struct NeuralNetwork {
-    pub layers: Vec<Node>
+    pub layers: Vec<Layer>
 }
 
 impl NeuralNetwork {
     pub fn new() -> Self {
-        println!("Im new!");
         Self { layers : Vec::new() }
+    }
+
+    pub fn create_layer(&mut self, node_amount: u32) {
+        let mut new_layer = Layer::new();
+        new_layer.add_nodes(node_amount);
+        self.layers.push(new_layer);
     }
 }
