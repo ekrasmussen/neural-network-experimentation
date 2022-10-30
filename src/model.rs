@@ -1,3 +1,5 @@
+//Node
+
 pub struct Node {
     pub value: f32,
     pub weights: Vec<f32>
@@ -8,6 +10,8 @@ impl Node {
         Self { value: 1.0, weights: Vec::new()}
     }
 }
+
+//Layer
 
 pub struct Layer {
     pub nodes: Vec<Node>
@@ -29,6 +33,8 @@ impl Layer {
     }
 
 }
+
+//Neural Network
 
 pub struct NeuralNetwork {
     pub layers: Vec<Layer>
