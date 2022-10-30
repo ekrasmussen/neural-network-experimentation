@@ -10,5 +10,7 @@ fn main() {
 
     let mut network = model::NeuralNetwork::new();
 
-    network.create_layer(2);
+    network.create_layer(15);
+
+    println!("{}",network.layers[0].len());
 }

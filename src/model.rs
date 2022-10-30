@@ -18,6 +18,10 @@ impl Layer {
         Self { nodes : Vec::new() }
     }
 
+    pub fn len(&self) -> usize {
+        self.nodes.len()
+    }
+
     pub fn add_nodes(&mut self, node_amount: u32) {
         for _n in 0..node_amount {
             self.nodes.push(Node::new())
