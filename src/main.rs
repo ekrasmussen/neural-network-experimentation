@@ -1,7 +1,5 @@
 mod model;
 
-
-
 fn main() {
     // let node_test = model::Node {
     //     value: 2.0,
@@ -9,4 +7,6 @@ fn main() {
     // };
 
     // println!("{}",node_test.value);
+
+    let network = model::NeuralNetwork::new();
 }
